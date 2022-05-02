@@ -19,42 +19,42 @@ plugins:
 - html
 rules:
   max-len:
-  - error
+  - warn
   - code: 120
-  eqeqeq: error
+  eqeqeq: warn
   semi-spacing:
-  - error
+  - warn
   - before: false
     after: true
   import/order:
-  - error
+  - warn
   - newlines-between: never
   object-curly-spacing:
-  - error
+  - warn
   - always
   comma-dangle:
-  - error
+  - warn
   - never
   semi:
   - warn
   - always
   quotes:
-  - error
+  - warn
   - double
   no-multiple-empty-lines:
-  - error
+  - warn
   - max: 1
     maxBOF: 0
     maxEOF: 1
-  no-console: error
-  no-debugger: error
-  no-implicit-globals: error
-  no-global-assign: error
+  no-console: warn
+  no-debugger: warn
+  no-implicit-globals: warn
+  no-global-assign: warn
   indent:
-  - error
+  - warn
   - 2
   - SwitchCase: 1
   import/no-unresolved:
-  - error
+  - warn
   - ignore:
-    - "^somthing-"
+    - "^app-"
