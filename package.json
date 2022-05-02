@@ -1,0 +1,63 @@
+{
+  "name": "coding-standards",
+  "version": "1.0.0",
+  "description": "coding standards enforcments",
+  "main": "src/index.js",
+  "scripts": {
+    "start:dev": "npx webpack serve --open --config webpack.dev.js",
+    "dev": "npm run build:dev",
+    "build": "npm run build:prod",
+    "build:dev": "npx webpack --config webpack.dev.js",
+    "build:prod": "npx webpack --config webpack.prod.js",
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint:stylelint": "npx stylelint \"**/*.scss\"",
+    "lint:eslint": "npx eslint --ext js ./src",
+    "lint:fix": "npm run lint:stylelint -- --fix && npm run lint:eslint -- --fix",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "test": "echo TODO"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/f4bio/landingpage.git"
+  },
+  "author": {
+    "name": "Fabio Tea",
+    "email": "iam@f4b.io",
+    "url": "https://iam.f4b.io"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabiodvc/coding-standards/issues"
+  },
+  "homepage": "https://github.com/fabiodvc/coding-standards#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.1",
+    "stylelint-config-standard": "^25.0.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,ejs}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
