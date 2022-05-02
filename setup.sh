@@ -32,10 +32,12 @@ main() {
 
   preCommitFileUrl="https://raw.githubusercontent.com/digital-venture-consultants/coding-standards/main/.pre-commit-config.yaml"
   eslintFileUrl="https://raw.githubusercontent.com/digital-venture-consultants/coding-standards/main/.eslintrc.json"
+  commitlintFileUrl="https://raw.githubusercontent.com/digital-venture-consultants/coding-standards/main/.commitlintrc.yml"
   # todo...
 
   ensure downloader "$preCommitFileUrl" "$destPath/.pre-commit-config.yaml" "https://raw.githubusercontent.com"
   ensure downloader "$eslintFileUrl" "$destPath/.eslintrc.json" "https://raw.githubusercontent.com"
+  ensure downloader "$commitlintFileUrl" "$destPath/.commitlintrc.yml" "https://raw.githubusercontent.com"
 
   say "..."
 
