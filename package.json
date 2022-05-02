@@ -29,10 +29,12 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fabiodvc/coding-standards/issues"
+    "url": "https://github.com/digital-venture-consultants/coding-standards/issues"
   },
-  "homepage": "https://github.com/fabiodvc/coding-standards#readme",
+  "homepage": "https://github.com/digital-venture-consultants/coding-standards#readme",
   "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
     "eslint": "^8.14.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",

@@ -11,14 +11,14 @@ install script almost completly "stolen" from [rustup](https://sh.rustup.rs/) - 
 ## how to
 
 ```bash
-$ curl --proto '=https' --tlsv1.2 -sSf https://bit.ly/dvc-coding-standards-sh | bash
+$ curl -fsSL https://bit.ly/dvc-coding-standards_sh | sh
 ```
 
 or:
 
 ```bash
-$ git clone https://github.com/fabiodvc/coding-standards/
-$ bash ./coding-standards/_setup.sh /path/to/my/project
+$ git clone https://github.com/digital-venture-consultants/coding-standards
+$ sh ./coding-standards/_setup.sh /path/to/my/project
 ```
 
 ...
